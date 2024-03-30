@@ -1,2 +1,3 @@
 apt_src xz-utils
 sed -i 's/opt_no_act = --no-act/opt_no_act = /' "$dir/src/debian/rules"
+version_suffix=gardenlinux0
