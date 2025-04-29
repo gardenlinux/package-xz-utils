@@ -1,4 +1,5 @@
-apt_src xz-utils
-sed -i 's/opt_no_act = --no-act/opt_no_act = /' "$dir/src/debian/rules"
-import_upstream_patches
-version_suffix=gl1
+apt-get install --no-install-recommends -y curl
+curl -sSLf 'https://github.com/tukaani-project/xz/releases/download/v5.8.1/xz-5.8.1.tar.xz' | xz -d | tee "$dir/orig.tar" | tar --extract --strip-components 1 --directory "$dir/src"
+apt_src --ignore-orig xz-utils
+apply_patches
+version_suffix=gl0~bp1443
