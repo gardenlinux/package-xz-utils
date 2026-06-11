@@ -1,6 +1,6 @@
 version_orig="5.8.3-1"
 version="$version_orig"
-version_suffix=gl0~bp1877
+version_suffix=gl0+bp2150
 
 git_src -b "debian/$version" "https://salsa.debian.org/debian/xz-utils.git"
 
